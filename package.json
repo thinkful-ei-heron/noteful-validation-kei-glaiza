@@ -7,6 +7,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.6.0",
     "@fortawesome/react-fontawesome": "^0.1.3",
     "date-fns": "^1.30.1",
+    "prop-types": "^15.7.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-router-dom": "^4.3.1",
@@ -17,7 +18,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "serve": "serve -s build",
+    "preserve": "npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -31,6 +33,7 @@
   "devDependencies": {
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.7.1",
-    "enzyme-to-json": "^3.3.5"
+    "enzyme-to-json": "^3.3.5",
+    "serve": "^11.2.0"
   }
 }
