@@ -4,7 +4,7 @@ import ApiContext from '../ApiContext';
 import config from '../config';
 import './AddNote.css';
 
-class AddNote extends React.Component {
+export default class AddNote extends React.Component {
     static contextType = ApiContext
     constructor(props) {
         super(props)
@@ -60,7 +60,6 @@ class AddNote extends React.Component {
     })
     .then((res)  => {
       const newArray = this.context.notes
-      console.log(noteToAdd)
       newArray.push(res)
       this.context.notes = newArray
       this.props.history.push('/')
@@ -140,5 +139,3 @@ class AddNote extends React.Component {
     )
   }
 }
-
-export default AddNote
