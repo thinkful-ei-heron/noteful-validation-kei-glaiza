@@ -71,10 +71,10 @@ export default class Note extends React.Component {
 }
 
 Note.propTypes = {
-  id: PropTypes.string,
+  id: PropTypes.string.isRequired,
   modified: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number
   ]),
-  name: PropTypes.string
+  name: PropTypes.string.isRequired
 }
