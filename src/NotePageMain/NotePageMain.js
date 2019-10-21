@@ -40,7 +40,18 @@ export default class NotePageMain extends React.Component {
 }
 
 NotePageMain.propTypes = {
+  id: PropTypes.string,
+  name: PropTypes.string,
+  modified: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number
+  ]),
+  onDeleteNote: PropTypes.func,
   history: PropTypes.object,
   location: PropTypes.object,
-  match: PropTypes.object
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      noteId: PropTypes.string.isRequired
+    })
+  })
 }

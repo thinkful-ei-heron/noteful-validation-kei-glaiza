@@ -51,7 +51,18 @@ export default class NoteListMain extends React.Component {
 }
 
 NoteListMain.propTypes = {
+  id: PropTypes.string,
+  name: PropTypes.string,
+  modified: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number
+  ]),
   history: PropTypes.object,
   location: PropTypes.object,
-  match: PropTypes.object
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      folderId: PropTypes.string
+    })
+  })
+ 
 }
